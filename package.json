@@ -4,9 +4,9 @@
   "description": "Mi primer proyecto de node",
   "main": "index.js",
   "scripts": {
-  "start": "node index.js",
-  "test": "node index.js",
-  "dev": "node ejercicioreduce.js"
+    "start": "node index.js",
+    "test": "node index.js",
+    "dev": "node ejercicioreduce.js"
   },
   "repository": {
     "type": "git",
@@ -14,5 +14,8 @@
   },
   "author": "giovannigonzalezdelgado25@gmail.com",
   "license": "ISC",
-  "homepage": "https://github.com/GiovanniGlez/backend20g#readme"
+  "homepage": "https://github.com/GiovanniGlez/backend20g#readme",
+  "dependencies": {
+    "colors": "^1.4.0"
+  }
 }
