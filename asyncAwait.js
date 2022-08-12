@@ -130,7 +130,7 @@
 const leiReceta = (recetaLaLei) => {
     return new Promise((resolve, reject) => {
         setTimeout(() => {
-            recetaLaLei.recetaLeida = true;
+            recetaLaLei.recetaLeida = false;
 
             if(!recetaLaLei.recetaLeida) {
                 reject(", no leyó receta!");
