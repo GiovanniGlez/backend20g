@@ -110,22 +110,6 @@
 // });
 
 
-/***
- * Pastel
- * 1 - Leer la receta
- * 2 - Conseguir los ingredientes
- * 3 - Preparacion de la masa
- * 4 - Hornear el pastel
- * 5 - Decorar el paster
- */
-
-const pastel = {
-    recetaLeida : false,
-    ingredientesConseguidos: false,
-    masaPreparada: false,
-    pastelHorneado: false,
-    pastelDecorado: false
-}
 
 
 /***
@@ -143,8 +127,7 @@ const pastel = {
     masaPreparada: false,
     pastelHorneado: false,
     pastelDecorado: false
-}
-
+ }
 const leiReceta = (leerReceta, callback) => {
     let err = null;
     setTimeout(() => {
