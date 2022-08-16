@@ -130,7 +130,7 @@
 const leiReceta = (recetaLaLei) => {
     return new Promise((resolve, reject) => {
         setTimeout(() => {
-            recetaLaLei.recetaLeida = false;
+            recetaLaLei.recetaLeida = true;
 
             if(!recetaLaLei.recetaLeida) {
                 reject(", no leyó receta!");
@@ -195,17 +195,21 @@ const decorado = (decoraPastel) => {
 const leiRecetaCompleta = async () => {
     try {
         const recetaLeida = await leiReceta({...pastel})
-        console.log("Leiste receta", recetaLeida);
         const completasteIngredientes = await ingredientesListos({...recetaLeida})
-        console.log("Tienes todos los ingredientes", completasteIngredientes);
         const masaCompleta = await amasar({...completasteIngredientes})
-        console.log("La masa esta lista", masaCompleta);
         const hornoPrecalentado = await horneado({...masaCompleta})
-        console.log("El pastel esta horneado", hornoPrecalentado);
         const decoracionPastel = await decorado({...hornoPrecalentado})
-        console.log("A comer!, el pastel esta listo", decoracionPastel)
+        console.log("A comer, el pastel esta listo", decoracionPastel);
+
+        return decoracionPastel
     } catch (err) {
         console.log("fallo un paso", err);
     }
 }
 leiRecetaCompleta()
+.then((decoracionPastel) => {
+    console.log("Completaste los pasos, disfruta tú pastel", decoracionPastel)
+})
+.catch((err) => {
+    console.log("Falto este paso", err)
+})

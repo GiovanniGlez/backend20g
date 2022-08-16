@@ -13,13 +13,13 @@ const fs = require("fs")
  *        Volver a leer el contenido la carpeta
  *        CICLO:
     *        Si esta vacio:
-    *           Imprimir que esta vacio       
+    *           Imprimir que esta vacio
     *        Si no:
     *           Checar si es una carpeta o no
-    * 
+    *
  *     SI NO:
  *        Eliminar archivo
- * 
+ *
  * FIN
  */
 
@@ -30,8 +30,8 @@ const removeAll = (path) => {
   const content = fs.readdirSync(path, "utf-8")
 
   content.forEach((file) => {
-    const newPath = `${path}/${file}` 
-    
+    const newPath = `${path}/${file}`
+
     counter += 1 // Para ver cuando es carpeta
     // Checar si algunos de estos files es carpeta o no
     const isDirectory = fs.statSync(`${path}/${file}`).isDirectory()
@@ -70,13 +70,13 @@ removeAll(path)const fs = require("fs")
  *        Volver a leer el contenido la carpeta
  *        CICLO:
     *        Si esta vacio:
-    *           Imprimir que esta vacio       
+    *           Imprimir que esta vacio
     *        Si no:
     *           Checar si es una carpeta o no
-    * 
+    *
  *     SI NO:
  *        Eliminar archivo
- * 
+ *
  * FIN
  */
 
@@ -87,8 +87,8 @@ const removeAll = (path) => {
   const content = fs.readdirSync(path, "utf-8")
 
   content.forEach((file) => {
-    const newPath = `${path}/${file}` 
-    
+    const newPath = `${path}/${file}`
+
     counter += 1 // Para ver cuando es carpeta
     // Checar si algunos de estos files es carpeta o no
     const isDirectory = fs.statSync(`${path}/${file}`).isDirectory()
